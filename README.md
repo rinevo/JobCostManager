@@ -1,5 +1,5 @@
-# JobCostManager
-行動記録
+# JobCostManager<br>
+行動記録<br>
 
 公開URL<br>
 https://sub-rinevo.ssl-lolipop.jp/JobCostManager/cj/schedule_list.php
