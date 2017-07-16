@@ -8,4 +8,4 @@ https://sub-rinevo.ssl-lolipop.jp/JobCostManager/cj/schedule_list.php
 JobCostManager/database/jobcostmanager_database.sql
 
 ブログ<br>
-http://rinevo.com/%E8%A1%8C%E5%8B%95%E8%A8%98%E9%8C%B2%E3%81%AE%E3%82%BD%E3%83%BC%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%89%E4%B8%80%E5%BC%8F%E3%82%92%E5%85%AC%E9%96%8B%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F/
+http://rinevo.com/%E8%A1%8C%E5%8B%95%E8%A8%98%E9%8C%B2%E3%81%AE%E3%82%BD%E3%83%BC%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%89%E5%85%AC%E9%96%8B/
