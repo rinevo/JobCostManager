@@ -1,0 +1,111 @@
+@CHARSET "UTF-8";
+
+#content .inner {
+	padding: 16px 0;
+}
+
+/* 案内
+---------------------------------------------------- */
+#annai {
+	position: relative;
+	float: left;
+	width: 75%;
+	margin: 0 auto;
+	padding: 0;
+	margin: 0;
+}
+#annai .hyoudai {
+	font-size: 28px;
+	font-weight: bolder;
+	color: green;
+}
+#annai .setumei {
+	margin-top: 8px;
+	font-size: 16px;
+	color: black;
+	width: 95%;
+}
+#annai .waku {
+	width: 95%;
+}
+#annai .waku li {
+	font-size: 20px;
+	margin: 8px 16px 0px 32px;
+
+}
+#annai .waku .hyoudai {
+	font-size: 32px;
+}
+#annai .waku .kinou {
+	position: relative;
+	border: 1px solid green;
+	margin: 16px 0;
+	padding: 8px;
+}
+#annai .waku .kinou img {
+	float: left;
+	position: absolute;
+	top: -18px;
+	left: -24px;
+}
+#annai .waku .kinou .hyoudai {
+	padding-left: 32px;
+}
+#annai .waku .kinou .setumei {
+	margin: 8px 16px 0 16px;
+}
+
+/* 新規ユーザー登録
+---------------------------------------------------- */
+#user_edit {
+	position: relative;
+	float: left;
+	display: block;
+	padding: 16px;
+	border: 1px solid green;
+	width: 20%;
+	margin-bottom: 16px;
+	background: green;
+	color: white;
+}
+
+#user_edit h1 {
+	font-size: 18px;
+	margin-bottom: 16px;
+	border-bottom: 1px solid seagreen;
+	padding-bottom: 8px;
+}
+
+#user_edit p {
+	margin-bottom: 8px;
+}
+
+#user_edit_submit {
+	height: 32px;
+	border:1px solid #4B546A;-webkit-box-shadow: #B7B8B8 0px 1px 0px inset;-moz-box-shadow: #B7B8B8 0px 1px 0px inset; box-shadow: #B7B8B8 0px 1px 0px inset; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px;font-family:arial, helvetica, sans-serif; padding: 1px 10px 1px 10px; text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; text-align: center; color: #FFFFFF; background-color: #4ba614;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4ba614), color-stop(100%, #008c00));
+	background-image: -webkit-linear-gradient(top, #4ba614, #008c00);
+	background-image: -moz-linear-gradient(top, #4ba614, #008c00);
+	background-image: -ms-linear-gradient(top, #4ba614, #008c00);
+	background-image: -o-linear-gradient(top, #4ba614, #008c00);
+	background-image: linear-gradient(top, #4ba614, #008c00);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#4ba614, endColorstr=#008c00);
+}
+#user_edit_submit:hover{
+	border:1px solid #4B546A; background-color: #36780f;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#36780f), color-stop(100%, #005900));
+	background-image: -webkit-linear-gradient(top, #36780f, #005900);
+	background-image: -moz-linear-gradient(top, #36780f, #005900);
+	background-image: -ms-linear-gradient(top, #36780f, #005900);
+	background-image: -o-linear-gradient(top, #36780f, #005900);
+	background-image: linear-gradient(top, #36780f, #005900);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#36780f, endColorstr=#005900);
+	cursor: pointer;
+}
+
+@media screen and (min-width : 850px) {
+
+	#user_edit {
+		position: relative;
+		float: right;
+	}
+}
+

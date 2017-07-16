@@ -1,0 +1,65 @@
+@CHARSET "UTF-8";
+
+/* アカウント情報
+---------------------------------------------------- */
+table.userinfo tr {
+	border-top: 1px solid #aaa;
+	display: block;
+}
+
+table.userinfo tr:last-child {
+	border-bottom: 1px solid #aaa;
+}
+
+table.userinfo th {
+	font-size: 24px;
+	text-align: left;
+	border-right: 1px solid #aaa;
+	width: 200px;
+	padding-left: 16px;
+}
+
+table.userinfo td {
+	font-size: 24px;
+	text-align: left;
+	padding: 4px 16px;
+}
+
+/* メニュー
+---------------------------------------------------- */
+.userinfo-menu {
+	margin: 8px 32px;
+}
+
+.userinfo-menu li {
+	padding-top: 8px;
+}
+
+.userinfo-menu a {
+	color: blue;
+	padding: 4px;
+}
+
+.userinfo-menu a:HOVER {
+	background-color: aqua;
+}
+
+.userinfo-menu a.userinfo-unsub:HOVER {
+	background-color: #f77;
+}
+
+/* 変更ダイアログ
+---------------------------------------------------- */
+#edit_dialog table {
+	width: 100%;
+}
+#edit_dialog td {
+	padding-top: 8px;
+}
+
+#edit_dialog td label {
+	display: block;
+}
+#edit_dialog input {
+	width: 100%;
+}

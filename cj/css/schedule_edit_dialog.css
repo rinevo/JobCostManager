@@ -1,0 +1,35 @@
+@CHARSET "UTF-8";
+
+/* 行動入力ダイアログ
+---------------------------------------------------- */
+#edit_dialog table {
+	width: 100%;
+}
+#edit_dialog .tr_todo td {
+	padding-bottom: 16px;
+}
+#edit_dialog td {
+	text-align: left;
+	vertical-align: middle;
+}
+#edit_dialog td label {
+	white-space: nowrap;
+}
+#edit_dialog select {
+	width: 100%;
+}
+#edit_dialog input[type="text"] {
+	width: 100%;
+}
+#edit_dialog .tr_section select {
+	width: 100px;
+}
+#edit_dialog .tr_todoentry td {
+	padding-top: 8px;
+}
+#edit_dialog .tr_todoentry label {
+	padding-left: 4px;
+}
+#edit_dialog .tr_todoentry {
+	display: none;
+}

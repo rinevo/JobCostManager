@@ -1,0 +1,160 @@
+@CHARSET "UTF-8";
+
+/* コンテンツ
+---------------------------------------------------- */
+#content .inner {
+	width: 95%;
+	margin: 0 auto;
+	padding: 8px 0;
+}
+#schedule_header {
+	width: 100%;
+	margin: 0 auto;
+}
+#schedule_header .btn_sime {
+	width: 50px;
+}
+#schedule_header .user .show_user {
+	display: inline;
+}
+#schedule_header .user .show_user input,
+#schedule_header .user .show_user label {
+	vertical-align: middle;
+	margin-left: 4px;
+}
+
+/* 集計リスト
+---------------------------------------------------- */
+div.total_list {
+	float: right;
+	margin-bottom: 8px;
+}
+
+/* 行動記録リスト(共通)
+---------------------------------------------------- */
+div.schedule_list {
+	width: 100%;
+}
+
+table.schedule {
+	width: 100%;
+	border-collapse: collapse;
+}
+table.schedule tr.header {
+	border-color: #ccc;
+	border-width: 1px;
+	border-style: solid;
+	text-align: center;
+	background: green;
+	color: white;
+}
+table.schedule td {
+	border: 1px #ccc solid;
+	border-style: solid;
+	text-align: left;
+	empty-cells: show;
+	height: 18px;
+}
+
+/*
+table.schedule td:HOVER,
+table.schedule input:HOVER,
+table.schedule select:HOVER {
+	background: #ffffaa;
+	border-color: #cccccccc;
+}
+*/
+
+table.schedule .btn_edit_start,
+table.schedule .btn_edit_save,
+table.schedule .btn_edit_cancel,
+table.schedule .btn_edit {
+	width: 40px;
+}
+
+table.schedule .btn_add,
+table.schedule .btn_del,
+table.schedule .btn_up,
+table.schedule .btn_dw {
+	width: 20px;
+}
+
+table.schedule .btn_edit_save,
+table.schedule .btn_edit_cancel {
+	display: none;
+}
+
+table.schedule td input,
+table.schedule td label {
+	padding: 2px;
+}
+table.schedule .td_date {
+	width: 100px;
+	white-space: nowrap;
+}
+
+table.schedule .td_time,
+table.schedule .text_time,
+table.schedule .lbl_time {
+	width: 50px;
+	text-align: right;
+}
+
+table.schedule .td_action {
+}
+table.schedule .td_action .sublabel label {
+	color: gray;
+	font-size: xx-small;
+	margin-right: 8px;
+}
+
+table.schedule .cbo_action_start,
+table.schedule .cbo_action_end,
+table.schedule .lbl_action {
+	width: 100%;
+}
+
+table.schedule .td_costin,
+table.schedule .text_costin,
+table.schedule .lbl_costin {
+	width: 50px;
+	text-align: right;
+}
+
+table.schedule .td_costout,
+table.schedule .text_costout,
+table.schedule .lbl_costout {
+	width: 50px;
+	text-align: right;
+}
+
+table.schedule .td_control {
+	width: 200px;
+}
+
+table.schedule tr.subtotal {
+	background: #eee;
+}
+table.schedule .text_time,
+table.schedule .text_costin,
+table.schedule .text_costout {
+	width: 40px;
+	ime-mode: disabled;
+}
+
+/* 行動記録リスト(閲覧モード)
+---------------------------------------------------- */
+table.schedule .text_time,
+table.schedule .cbo_action_start,
+table.schedule .cbo_action_end,
+table.schedule .text_costin,
+table.schedule .text_costout,
+table.schedule .btn_up,
+table.schedule .btn_dw,
+table.schedule .btn_edit_save,
+table.schedule .btn_edit_cancel,
+table.schedule .btn_add,
+table.schedule .btn_edit,
+table.schedule .btn_del {
+	display: none;
+}

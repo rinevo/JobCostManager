@@ -1,0 +1,94 @@
+@CHARSET "UTF-8";
+
+/* リスト
+---------------------------------------------------- */
+#list {
+	border-collapse: collapse;
+	border: 1px green solid;
+	margin-top: 8px;
+	width: 100%;
+}
+#list th {
+	border: 1px #ccc solid;
+	text-align: center;
+	background: blue;
+	color: white;
+}
+#list td {
+	border: 1px #ccc solid;
+	padding: 1px;
+	text-align: left;
+	width: 40px;
+}
+#list td.td_name {
+	white-space: nowrap;
+	font-weight: bold;
+}
+#list .tr_item td label {
+	display: block;
+}
+#list .td_role {
+}
+#list .td_ope {
+	width: 100px;
+	white-space: nowrap;
+}
+#content table input.btn_up,
+#content table input.btn_dw {
+	width: 20px;
+}
+#content table input.btn_add,
+#content table input.btn_del,
+#content table input.btn_edit {
+	width: 40px;
+}
+#list .tr_item:HOVER {
+	background: #ffffaa;
+}
+
+/* 変更ダイアログ
+---------------------------------------------------- */
+#edit_dialog table {
+	width: 100%;
+}
+#edit_dialog td {
+	padding-top: 8px;
+}
+
+#edit_dialog td label {
+	display: block;
+}
+#editstr {
+	width: 100%;
+}
+#edit_dialog .td_label {
+	padding-top: 16px;
+}
+#edit_dialog .td_label label {
+	padding: 1px 2px;
+	background: blue;
+	color: white;
+	vertical-align: center;
+}
+#edit_dialog .tr_cj .td_label label {
+	background: green;
+}
+#edit_dialog .tr_master .td_label label {
+	background: gray;
+}
+#edit_dialog .tr_attr td {
+	padding-top: 1px;
+}
+#edit_dialog .tr_attr label,
+#edit_dialog .tr_attr input {
+	display: inline-block;
+	margin-right: 2px;
+}
+#edit_dialog .tr_attr .lbl_item {
+	display: block;
+	width: 150px;
+}
+label#editstr-disabled {
+	display: block;
+	border: 1px #ccc solid;
+}

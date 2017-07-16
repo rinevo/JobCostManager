@@ -1,0 +1,55 @@
+@CHARSET "UTF-8";
+
+div.setumei {
+	font-size: 24px;
+	color: green;
+	margin-bottom: 16px;
+}
+
+#contact_form {
+	width: 90%;
+	margin: 0 auto;
+	font-size: 18px;
+}
+#contact_form th {
+	vertical-align: top;
+	padding-top: 22px;
+	text-align: right;
+	white-space: nowrap;
+}
+#contact_form td {
+	padding-top: 16px;
+}
+
+#contact_form .tr_submit {
+	text-align: center;
+}
+
+#contact_form input[type="text"],
+#contact_form textarea {
+	width: 100%;
+	padding: 4px;
+	margin-left: 8px;
+	font-size: 16px;
+}
+
+#contact_form input[type="submit"] {
+	height: 32px;
+	border:1px solid #4B546A;-webkit-box-shadow: #B7B8B8 0px 1px 0px inset;-moz-box-shadow: #B7B8B8 0px 1px 0px inset; box-shadow: #B7B8B8 0px 1px 0px inset; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px;font-family:arial, helvetica, sans-serif; padding: 1px 10px 1px 10px; text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; text-align: center; color: #FFFFFF; background-color: #4ba614;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4ba614), color-stop(100%, #008c00));
+	background-image: -webkit-linear-gradient(top, #4ba614, #008c00);
+	background-image: -moz-linear-gradient(top, #4ba614, #008c00);
+	background-image: -ms-linear-gradient(top, #4ba614, #008c00);
+	background-image: -o-linear-gradient(top, #4ba614, #008c00);
+	background-image: linear-gradient(top, #4ba614, #008c00);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#4ba614, endColorstr=#008c00);
+}
+#contact_form input[type="submit"]:hover{
+	border:1px solid #4B546A; background-color: #36780f;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#36780f), color-stop(100%, #005900));
+	background-image: -webkit-linear-gradient(top, #36780f, #005900);
+	background-image: -moz-linear-gradient(top, #36780f, #005900);
+	background-image: -ms-linear-gradient(top, #36780f, #005900);
+	background-image: -o-linear-gradient(top, #36780f, #005900);
+	background-image: linear-gradient(top, #36780f, #005900);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#36780f, endColorstr=#005900);
+	cursor: pointer;
+}

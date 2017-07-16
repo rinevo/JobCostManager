@@ -1,0 +1,103 @@
+@CHARSET "UTF-8";
+
+/* コンテンツ
+---------------------------------------------------- */
+#content .inner {
+	width: 100%;
+	padding: 8px 0;
+}
+#list_header {
+	width: 95%;
+	margin: 0 auto;
+}
+#list_header .btn_sime,
+#list_header .btn_item {
+	width: 50px;
+}
+#list_header .user .show_user {
+	display: inline;
+}
+#list_header .user .show_user input,
+#list_header .user .show_user label {
+	vertical-align: middle;
+	margin-left: 4px;
+}
+
+/* 集計リスト
+---------------------------------------------------- */
+div.total_list {
+	float: right;
+	margin-bottom: 8px;
+}
+
+/* リスト
+---------------------------------------------------- */
+div.item_list {
+	width: 100%;
+}
+
+#list {
+	border-collapse: collapse;
+	border: 1px green solid;
+	margin: 0 auto;
+	margin-top: 8px;
+}
+#list th {
+	border: 1px #ccc solid;
+	text-align: center;
+	background: green;
+	color: white;
+}
+#list td {
+	border: 1px #ccc solid;
+	text-align: left;
+	white-space: nowrap;
+}
+#list td.td_project,
+#list td.td_work,
+#list td.td_customer,
+#list td.td_process,
+#list td.td_action {
+	white-space: normal;
+}
+#list td.td_no
+#list td.td_date,
+#list td.td_sime2,
+#list td.td_total {
+}
+
+/* グラフ
+---------------------------------------------------- */
+#content .inner .graph {
+	width: 95%;
+	margin: 0 auto;
+	margin-top: 8px;
+}
+
+/* 表示項目の選択ダイアログ
+---------------------------------------------------- */
+#item_dialog .item_list {
+	width: 100%;
+	border-collapse: collapse;
+	border: 1px green solid;
+	margin-top: 8px;
+}
+#item_dialog th {
+	border: 1px #ccc solid;
+	text-align: center;
+	background: blue;
+	background: green;
+	color: white;
+}
+#item_dialog td {
+	border: 1px #ccc solid;
+	padding: 1px;
+	text-align: left;
+}
+#item_dialog td.td_chk {
+	text-align: center;
+	width: 50px;
+}
+#item_dialog .tr_item:HOVER {
+	background: #ffffaa;
+}

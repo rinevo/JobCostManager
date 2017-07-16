@@ -1,0 +1,99 @@
+@CHARSET "UTF-8";
+
+/* リスト
+---------------------------------------------------- */
+#content table {
+	width: 100%;
+	border-collapse: collapse;
+	border: 1px white solid;
+	margin-top: 8px;
+}
+#content table th {
+	border: 1px #ccc solid;
+	text-align: center;
+	background: blue;
+	color: white;
+}
+#content table td {
+	border: 1px white solid;
+	padding: 5px;
+	text-align: left;
+}
+#content table .td_default {
+	width: 10%;
+	text-align: center;
+}
+#content table .td_name {
+	width: 60%;
+}
+#content table .td_role {
+	width: 10%;
+}
+#content table .td_ope {
+	width: 20%;
+}
+#content table .tr_item:HOVER {
+	background: #ffffaa;
+}
+#edit_no_new, #edit_name_new,
+#edit_name_update {
+	width: 100%;
+}
+#content a {
+	border:1px solid #819bcb; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px;font-family:arial, helvetica, sans-serif; padding: 1px 10px 1px 10px; text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; text-align: center; color: #FFFFFF; background-color: #a5b8da;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #a5b8da), color-stop(100%, #7089b3));
+	background-image: -webkit-linear-gradient(top, #a5b8da, #7089b3);
+	background-image: -moz-linear-gradient(top, #a5b8da, #7089b3);
+	background-image: -ms-linear-gradient(top, #a5b8da, #7089b3);
+	background-image: -o-linear-gradient(top, #a5b8da, #7089b3);
+	background-image: linear-gradient(top, #a5b8da, #7089b3);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#a5b8da, endColorstr=#7089b3);
+}
+
+#content a:hover{
+	border:1px solid #819bcb; background-color: #819bcb;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#819bcb), color-stop(100%, #536f9d));
+	background-image: -webkit-linear-gradient(top, #819bcb, #536f9d);
+	background-image: -moz-linear-gradient(top, #819bcb, #536f9d);
+	background-image: -ms-linear-gradient(top, #819bcb, #536f9d);
+	background-image: -o-linear-gradient(top, #819bcb, #536f9d);
+	background-image: linear-gradient(top, #819bcb, #536f9d);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#819bcb, endColorstr=#536f9d);
+	cursor: pointer;
+	text-decoration: none;
+}
+#content table a.group_access {
+	border:1px solid #819bcb; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px;font-family:arial, helvetica, sans-serif; padding: 1px 10px 1px 10px; text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; text-align: center; color: #FFFFFF; background-color: #a5b8da;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #a5b8da), color-stop(100%, #7089b3));
+	background-image: -webkit-linear-gradient(top, #a5b8da, #7089b3);
+	background-image: -moz-linear-gradient(top, #a5b8da, #7089b3);
+	background-image: -ms-linear-gradient(top, #a5b8da, #7089b3);
+	background-image: -o-linear-gradient(top, #a5b8da, #7089b3);
+	background-image: linear-gradient(top, #a5b8da, #7089b3);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#a5b8da, endColorstr=#7089b3);
+	font-size: 16px;
+}
+#content table a.group_access:hover{
+	border:1px solid #819bcb; background-color: #819bcb;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#819bcb), color-stop(100%, #536f9d));
+	background-image: -webkit-linear-gradient(top, #819bcb, #536f9d);
+	background-image: -moz-linear-gradient(top, #819bcb, #536f9d);
+	background-image: -ms-linear-gradient(top, #819bcb, #536f9d);
+	background-image: -o-linear-gradient(top, #819bcb, #536f9d);
+	background-image: linear-gradient(top, #819bcb, #536f9d);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#819bcb, endColorstr=#536f9d);
+	cursor: pointer;
+	text-decoration: none;
+}
+
+/* 変更ダイアログ
+---------------------------------------------------- */
+#edit_dialog table {
+	width: 100%;
+}
+#edit_dialog td {
+	padding-top: 8px;
+}
+
+#edit_dialog td label {
+	display: block;
+}
+#edit_dialog input {
+	width: 100%;
+}

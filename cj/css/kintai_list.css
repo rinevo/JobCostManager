@@ -1,0 +1,58 @@
+@CHARSET "UTF-8";
+
+/* コンテンツ
+---------------------------------------------------- */
+#content .inner {
+	width: 95%;
+	padding: 8px;
+}
+
+#list_header .btn_sime {
+	width: 50px;
+}
+
+#list_header .user .show_user {
+	display: inline;
+}
+#list_header .user .show_user input,
+#list_header .user .show_user label {
+	vertical-align: middle;
+	margin-left: 4px;
+}
+
+/* 集計リスト
+---------------------------------------------------- */
+div.total_list {
+	float: right;
+	margin-bottom: 8px;
+}
+
+/* リスト
+---------------------------------------------------- */
+#list {
+	border-collapse: collapse;
+	border: 1px green solid;
+	margin-top: 8px;
+}
+#list th {
+	border: 1px #ccc solid;
+	text-align: center;
+	background: blue;
+	background: green;
+	color: white;
+	white-space: nowrap;
+}
+#list td {
+	border: 1px #ccc solid;
+	padding: 2px;
+	text-align: right;
+	white-space: nowrap;
+	width: 60px;
+}
+#list td.td_section_top,
+#list td.td_section_end {
+	text-align: center;
+}
+#list tr:HOVER {
+	background: #ffffaa;
+}

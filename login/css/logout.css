@@ -1,0 +1,28 @@
+@CHARSET "UTF-8";
+
+/* コンテンツ
+---------------------------------------------------- */
+#content .inner {
+	text-align: center;
+}
+
+#content .logout {
+	padding: 16px;
+	width: 100%;
+	font-size: 18px;
+}
+
+#content .message {
+	padding: 16px;
+	width: 100%;
+	font-size: 13px;
+}
+
+#content .login {
+	padding: 16px;
+	width: 100%;
+	font-size: 13px;
+}
+#content .login a {
+	color: blue;
+}

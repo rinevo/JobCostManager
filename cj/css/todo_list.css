@@ -1,0 +1,186 @@
+@CHARSET "UTF-8";
+
+/* コンテンツ
+---------------------------------------------------- */
+#content .inner {
+	width: 95%;
+	padding: 8px;
+}
+
+/* リストメニュー
+---------------------------------------------------- */
+#list_header .date .past {
+	display: inline;
+	padding: 0px;
+}
+#list_header .date .past input,
+#list_header .date .past label {
+	vertical-align: middle;
+	margin-left: 4px;
+}
+#list_header .btn_sort {
+	width: 70px;
+}
+
+#list_header .user .show_user {
+	display: inline;
+}
+#list_header .user .show_user input,
+#list_header .user .show_user label {
+	vertical-align: middle;
+	margin-left: 4px;
+}
+
+/* リスト
+---------------------------------------------------- */
+#list {
+	width: 100%;
+	border-collapse: collapse;
+	border: 1px green solid;
+	margin-top: 8px;
+}
+#list th {
+	border: 1px #ccc solid;
+	text-align: center;
+	background: blue;
+	background: green;
+	color: white;
+}
+#list td {
+	border: 1px #ccc solid;
+	padding: 1px;
+	text-align: left;
+}
+#list input.btn_up,
+#list input.btn_dw {
+	width: 20px;
+}
+#list input.btn_add,
+#list input.btn_del,
+#list input.btn_edit {
+	width: 40px;
+}
+#list .tr_project {
+	border-color: #ccc;
+	border-width: 1px;
+	border-style: solid;
+	background: gray;
+	color: white;
+}
+#list .tr_project .td_todo {
+	margin-right: 8px;
+	font-weight: bold;
+}
+#list .td_todo .sublabel label {
+	color: gray;
+	font-size: xx-small;
+	margin-right: 8px;
+}
+#list .td_todo .sublabel {
+	white-space: nowrap;
+}
+#list .td_date_top,
+#list .td_date_end {
+	width: 40px;
+	text-align: right;
+}
+#list .td_costin,
+#list .td_costout {
+	width: 40px;
+	text-align: right;
+}
+#list .td_costin,
+#list .td_costout,
+#list .th_costin,
+#list .th_costout {
+	display: none;
+}
+#list .td_status {
+	width: 60px;
+}
+#list .td_ope {
+	width: 200px;
+}
+#list .tr_item:HOVER {
+	background: #ffffaa;
+}
+#list .td_todo .div_icon {
+	margin-top: 8px;
+	margin-right: 4px;
+	width: 14px;
+}
+#list .td_todo .div_icon,
+#list .td_todo .div_action {
+	float: left;
+}
+#list .td_todo .busy {
+	float: right;
+	width: 16px;
+}
+
+/* 並び替えダイアログ
+---------------------------------------------------- */
+#sort_dialog .sort_list {
+	width: 100%;
+	border-collapse: collapse;
+	border: 1px green solid;
+	margin-top: 8px;
+}
+#sort_dialog th {
+	border: 1px #ccc solid;
+	text-align: center;
+	background: blue;
+	background: green;
+	color: white;
+}
+#sort_dialog td {
+	border: 1px #ccc solid;
+	padding: 1px;
+	text-align: left;
+	white-space: nowrap;
+}
+#sort_dialog td.td_bundle {
+	width: 50px;
+	text-align: center;
+}
+#sort_dialog input.btn_up,
+#sort_dialog input.btn_dw {
+	width: 20px;
+}
+#sort_dialog .tr_item:HOVER {
+	background: #ffffaa;
+}
+#sort_dialog input[type="button"] {
+	border:1px solid #819bcb; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px;font-family:arial, helvetica, sans-serif; padding: 1px 1px 1px 1px; text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; text-align: center; color: #FFFFFF; background-color: #a5b8da;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #a5b8da), color-stop(100%, #7089b3));
+	background-image: -webkit-linear-gradient(top, #a5b8da, #7089b3);
+	background-image: -moz-linear-gradient(top, #a5b8da, #7089b3);
+	background-image: -ms-linear-gradient(top, #a5b8da, #7089b3);
+	background-image: -o-linear-gradient(top, #a5b8da, #7089b3);
+	background-image: linear-gradient(top, #a5b8da, #7089b3);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#a5b8da, endColorstr=#7089b3);
+	font-size: 16px;
+}
+#sort_dialog input[type="button"]:hover{
+	border:1px solid #819bcb; background-color: #819bcb;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#819bcb), color-stop(100%, #536f9d));
+	background-image: -webkit-linear-gradient(top, #819bcb, #536f9d);
+	background-image: -moz-linear-gradient(top, #819bcb, #536f9d);
+	background-image: -ms-linear-gradient(top, #819bcb, #536f9d);
+	background-image: -o-linear-gradient(top, #819bcb, #536f9d);
+	background-image: linear-gradient(top, #819bcb, #536f9d);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#819bcb, endColorstr=#536f9d);
+	cursor: pointer;
+	text-decoration: none;
+}
+
+
+/* 削除ダイアログ
+---------------------------------------------------- */
+#delete_dialog table {
+	width: 100%;
+}
+#delete_dialog td {
+	padding-top: 8px;
+}
+#delete_dialog .editstr-disabled {
+	border: 1px #ccc solid;
+}

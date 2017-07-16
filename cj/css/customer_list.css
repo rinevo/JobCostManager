@@ -1,0 +1,67 @@
+@CHARSET "UTF-8";
+
+/* コンテンツ
+---------------------------------------------------- */
+#content .inner {
+	width: 95%;
+}
+
+/* リスト
+---------------------------------------------------- */
+#content table {
+	width: 100%;
+	border-collapse: collapse;
+	border: 1px green solid;
+	margin-top: 8px;
+}
+#content table th {
+	border: 1px #ccc solid;
+	text-align: center;
+	background: blue;
+	background: green;
+	color: white;
+}
+#content table td {
+	border: 1px #ccc solid;
+	padding: 5px;
+	text-align: left;
+}
+#content table input.btn_up,
+#content table input.btn_dw {
+	width: 20px;
+}
+#content table input.btn_add,
+#content table input.btn_del,
+#content table input.btn_edit {
+	width: 40px;
+}
+#content table .td_name {
+	width: 80%;
+}
+#content table .td_ope {
+	width: 20%;
+}
+#content table tr:HOVER {
+	background: #ffffaa;
+}
+#editstr {
+	width: 100%;
+}
+
+/* 変更ダイアログ
+---------------------------------------------------- */
+#edit_dialog table {
+	width: 100%;
+}
+#edit_dialog td {
+	padding-top: 8px;
+}
+#edit_dialog td label {
+	display: block;
+}
+#edit_dialog td input {
+	width: 100%;
+}
+#editstr-disabled {
+	border: 1px #ccc solid;
+}

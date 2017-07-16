@@ -1,0 +1,11 @@
+@CHARSET "UTF-8";
+
+#content .hyoudai {
+	font-size: 28px;
+	font-weight: bolder;
+	color: green;
+}
+#content li {
+	font-size: 20px;
+	margin: 8px 16px 0px 32px;
+}

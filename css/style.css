@@ -1,0 +1,255 @@
+@charset "utf-8";
+
+/* ページ全体の枠組み
+---------------------------------------------------- */
+body, div, p, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, input, table, td, th {
+	margin: 0px;
+	padding: 0px;
+}
+body {
+	font-size: 13px;
+	color: #000000;
+	background: #ffffff;
+	width: 100%;
+	min-width: 980px;
+}
+html {
+	height: 100%;
+}
+body {
+     width: 100%;
+     position: relative;
+     height:auto !important; /*IE6対策*/
+     height: 100%; /*IE6対策*/
+     min-height: 100%;
+}
+
+/* リンクと画像
+---------------------------------------------------- */
+a {
+	text-decoration: none;
+	color: blue;
+}
+a:hover {
+	text-decoration: underline;
+}
+img {
+	border: none;
+	max-width: 100%;
+}
+
+/* 回り込み解除
+---------------------------------------------------- */
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+.clearfix {
+	display: inline-block;
+}
+
+/* ヘッダ
+---------------------------------------------------- */
+#header {
+	width: 100%;
+	height: 80px;
+	background: green;
+}
+#header .inner {
+	margin: 0 auto;
+	position: relative;
+	top: 8px;
+	width: 95%;;
+	height: 64px;
+}
+#header .inner .logo {
+	float: left;
+	height: 64px;
+}
+
+/* ヘッダ（ログオフ）
+---------------------------------------------------- */
+#header .inner .div_logoff {
+	display: block;
+	position: right;
+	height: 25px;;
+}
+#header .inner .logoff {
+	position: relative;
+	float: right;
+	background: green;
+	height: 25px;
+}
+#header .inner .logoff input.submit {
+	padding: 6px 5px;
+	border: none;
+	line-height: 1.0;
+	color: blue;
+}
+#header .inner .logoff input.submit:HOVER {
+	text-decoration: underline;
+	cursor:pointer;
+}
+#header .inner .logoff a {
+	line-height: 1.0;
+	color: white;
+}
+#header .inner .logoff li {
+	padding: 7px 0px;
+	margin-left: 7px;
+}
+#header .inner .logoff li {
+	display: block;
+	float: left;
+	color: white;
+}
+#header .inner .logoff li.name {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+/* ヘッダ（ログイン）
+---------------------------------------------------- */
+@media screen and (min-width : 850px) {
+}
+
+/* ヘッダ（メニュー）
+---------------------------------------------------- */
+#header .inner .menu {
+	position: relative;
+	float: right;
+}
+#header .inner .menu li {
+	position: relative;
+	display: block;
+	float: left;
+	padding: 1px 0px;
+	margin-left: 7px;
+	color: white;
+}
+#header .inner .menu a {
+	border:1px solid #4B546A;-webkit-box-shadow: #B7B8B8 0px 1px 0px inset;-moz-box-shadow: #B7B8B8 0px 1px 0px inset; box-shadow: #B7B8B8 0px 1px 0px inset; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px;font-family:arial, helvetica, sans-serif; padding: 1px 10px 1px 10px; text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; text-align: center; color: #FFFFFF; background-color: #4ba614;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4ba614), color-stop(100%, #008c00));
+	background-image: -webkit-linear-gradient(top, #4ba614, #008c00);
+	background-image: -moz-linear-gradient(top, #4ba614, #008c00);
+	background-image: -ms-linear-gradient(top, #4ba614, #008c00);
+	background-image: -o-linear-gradient(top, #4ba614, #008c00);
+	background-image: linear-gradient(top, #4ba614, #008c00);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#4ba614, endColorstr=#008c00);
+	font-size: 16px;
+}
+#header .inner .menu a:hover {
+	border:1px solid #4B546A; background-color: #36780f;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#36780f), color-stop(100%, #005900));
+	background-image: -webkit-linear-gradient(top, #36780f, #005900);
+	background-image: -moz-linear-gradient(top, #36780f, #005900);
+	background-image: -ms-linear-gradient(top, #36780f, #005900);
+	background-image: -o-linear-gradient(top, #36780f, #005900);
+	background-image: linear-gradient(top, #36780f, #005900);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#36780f, endColorstr=#005900);
+	cursor: pointer;
+	text-decoration: none;
+}
+#header .inner .menu li > a {
+	display: block;
+	width: 80px;
+}
+#header .inner .menu li ul li {
+	margin: 2px 7px;
+}
+#header .inner .menu li ul {
+	position: absolute;
+	left: -7px;
+	visibility: hidden;
+	width: 115px;
+	background: green;
+	border: 1px solid #ccc;
+	z-index: 10;
+}
+#header .inner .menu li:HOVER ul {
+	visibility: visible;
+}
+
+/* メインコンテンツ（共通）
+---------------------------------------------------- */
+#content {
+	width: 100%;
+	padding-bottom: 100px;
+}
+
+#content .inner {
+	position: relative;
+	width: 90%;
+	margin: 0 auto;
+	padding: 16px;
+}
+
+#content .inner .info {
+	margin-bottom: 16px;
+	color: green;
+}
+
+#content .inner input[type="button"] {
+	border:1px solid #819bcb; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px;font-family:arial, helvetica, sans-serif; padding: 1px 1px 1px 1px; text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; text-align: center; color: #FFFFFF; background-color: #a5b8da;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #a5b8da), color-stop(100%, #7089b3));
+	background-image: -webkit-linear-gradient(top, #a5b8da, #7089b3);
+	background-image: -moz-linear-gradient(top, #a5b8da, #7089b3);
+	background-image: -ms-linear-gradient(top, #a5b8da, #7089b3);
+	background-image: -o-linear-gradient(top, #a5b8da, #7089b3);
+	background-image: linear-gradient(top, #a5b8da, #7089b3);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#a5b8da, endColorstr=#7089b3);
+	font-size: 16px;
+}
+#content .inner input[type="button"]:hover{
+	border:1px solid #819bcb; background-color: #819bcb;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#819bcb), color-stop(100%, #536f9d));
+	background-image: -webkit-linear-gradient(top, #819bcb, #536f9d);
+	background-image: -moz-linear-gradient(top, #819bcb, #536f9d);
+	background-image: -ms-linear-gradient(top, #819bcb, #536f9d);
+	background-image: -o-linear-gradient(top, #819bcb, #536f9d);
+	background-image: linear-gradient(top, #819bcb, #536f9d);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#819bcb, endColorstr=#536f9d);
+	cursor: pointer;
+	text-decoration: none;
+}
+
+/* フッタ
+---------------------------------------------------- */
+#footer {
+	padding-top: 15px;
+	line-height: 1.0;
+	font-size: 100%;
+	width: 100%;
+	height: 70px;
+	position:absolute;
+	left: 0%; /* IE9対策 */
+	bottom:0;
+	background: green;
+	text-align: center;
+}
+ul#footnav {
+	display: inline-block;
+}
+ul#footnav li {
+	float: left;
+	display: block;
+	padding: 0 10px;
+	border-left: 1px solid #ffffff;
+	width: auto;
+	white-space: nowrap;
+}
+ul#footnav > li:first-child {
+	padding-left: 0;
+	border-left: none;
+}
+ul#footnav li a {
+	color: white;
+}
+p#copyright {
+	color: #fff;
+}
+
+/* ダイアログメッセージ
+---------------------------------------------------- */
+#alert_dialog .label {
+	font-size: 13px;
+}
