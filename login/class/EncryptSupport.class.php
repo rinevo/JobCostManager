@@ -1,43 +1,32 @@
 <?php
 class EncryptSupport {
 
+	CONST OPENSSL_CIPHER_ALGO = 'aes-256-cbc';
+	CONST OPENSSL_OPTIONS = OPENSSL_RAW_DATA | OPENSSL_ZERO_PADDING;
+
 	/**
 	 * 暗号化キー
 	 * @var unknown_type
 	 */
 	protected $key = 'NyTv0y24TPxQQOcFjuvCwjdRDrHJqLO71io6oobZGIMTa6fBtH';
-	protected $td;
-	protected $iv;
-	protected $ks;
+	protected $iv = null;
 
 	/**
 	 * コンストラクタ
 	 * @param unknown_type $key
 	 */
-	function __construct($key = null) {
-
-		// 暗号モジュールをオープン
-		$this->td = mcrypt_module_open(MCRYPT_BLOWFISH, '', MCRYPT_MODE_ECB, '');
+	public function __construct($key = null) {
 
 		// 初期化ベクトルを用意
-		// 5.3より前のWindowsでは、MCRYPT_DEV_URANDOM の代わりに MCRYPT_RAND を使用する
-		$this->iv = mcrypt_create_iv(mcrypt_enc_get_iv_size($this->td), MCRYPT_DEV_URANDOM);
-		$this->ks = mcrypt_enc_get_key_size($this->td);
+		$iv_length = openssl_cipher_iv_length(EncryptSupport::OPENSSL_CIPHER_ALGO);
+		$this->iv = hex2bin(openssl_random_pseudo_bytes($iv_length));
 
 		// キーを作成
 		if ($key) {
-			$this->key = substr(md5($key), 0, $this->ks);
+			$this->key = md5($key);
 		} else {
-			$this->key = substr(md5($this->key), 0, $this->ks);
+			$this->key = md5($this->key);
 		}
-	}
-
-	/**
-	 * デストラクタ
-	 */
-	function __destruct() {
-		// 暗号モジュールをクローズ
-		mcrypt_module_close($this->td);
 	}
 
 	/**
@@ -45,18 +34,12 @@ class EncryptSupport {
 	 * @param unknown_type $string
 	 * @return string
 	 */
-	function EncodeString($string) {
+	public function EncodeString($string) {
 		if (strlen($string) < 1) {
 			return '';
 		}
 
-		$base64_data = base64_encode($string);
-
-		mcrypt_generic_init($this->td, $this->key, $this->iv);				// 暗号化処理を初期化
-		$encrypted_data = mcrypt_generic($this->td, $base64_data);			// データを暗号化
-		mcrypt_generic_deinit($this->td);									// 暗号化ハンドラを終了
-
-		return base64_encode($encrypted_data);
+		return $this->encrypt($string);
 	}
 
 	/**
@@ -64,17 +47,46 @@ class EncryptSupport {
 	 * @param unknown_type $string
 	 * @return string
 	 */
-	function DecodeString($string) {
+	public function DecodeString($string) {
 		if (strlen($string) < 1) {
 			return '';
 		}
 
-		$encrypted_data = base64_decode($string);
-
-		mcrypt_generic_init($this->td, $this->key, $this->iv);				// 暗号化処理を初期化
-		$decrypted_data = mdecrypt_generic($this->td, $encrypted_data);		// データを複号
-		mcrypt_generic_deinit($this->td);									// 暗号化ハンドラを終了
-
-		return base64_decode($decrypted_data);
+		return $this->decrypt($string);
 	}
+
+    private function encrypt($plain_text) {
+        return bin2hex(
+            openssl_encrypt(
+                $this->pkcs5_padding($plain_text),
+                EncryptSupport::OPENSSL_CIPHER_ALGO,
+                $this->key,
+                EncryptSupport::OPENSSL_OPTIONS,
+                $this->iv
+            )
+        );
+    }
+
+    private function decrypt($encrypted_text) {
+        return $this->pkcs5_suppress(
+            openssl_decrypt(
+                hex2bin($encrypted_text),
+                EncryptSupport::OPENSSL_CIPHER_ALGO,
+                $this->key,
+                EncryptSupport::OPENSSL_OPTIONS,
+                $this->iv
+            )
+        );
+    }
+
+    private function pkcs5_padding($data) {
+        $block_size = openssl_cipher_iv_length(EncryptSupport::OPENSSL_CIPHER_ALGO);
+        $padding = $block_size - (strlen($data) % $block_size);
+        return $data . str_repeat(chr($padding), $padding);
+    }
+
+    private function pkcs5_suppress($data) {
+        $padding = ord($data[strlen($data) - 1]);
+        return substr($data, 0, -$padding);
+    }
 }

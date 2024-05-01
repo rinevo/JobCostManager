@@ -144,8 +144,8 @@ class UserListSQL extends UserList {
 			$status = isset($_POST['user_edit_status']) ? $_POST['user_edit_status'] : 0;
 			$param = ($status == 1) ? md5(uniqid()) : '';
 
-			$sql = 'INSERT INTO '.$this->usertable.'(uid, passwd, param, mail, status, name, update_uid, update_time) ';
-			$sql.= 'VALUES(:uid, :passwd, :param, :mail, :status, :name, :update_uid, NOW())';
+			$sql = 'INSERT INTO '.$this->usertable.'(uid, passwd, param, mail, status, name, update_uid, group_no_default, update_time) ';
+			$sql.= 'VALUES(:uid, :passwd, :param, :mail, :status, :name, :update_uid, :group_no_default, NOW())';
 
 			$stmt = $db->prepare($sql);
 			$stmt->bindValue(':uid', $_POST['user_edit_uid']);
@@ -155,6 +155,7 @@ class UserListSQL extends UserList {
 			$stmt->bindValue(':status', $status);
 			$stmt->bindValue(':name', isset($_POST['user_edit_name']) ? $_POST['user_edit_name'] : $_POST['user_edit_uid']);
 			$stmt->bindValue(':update_uid', isset($GLOBALS['auth']) ? $GLOBALS['auth']->getParent_uid() : '');
+			$stmt->bindValue(':group_no_default', 0);
 			$stmt->execute();
 
 			// グループへの登録

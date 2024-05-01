@@ -138,16 +138,16 @@ class GroupListSQL {
 			$stmt->execute();
 
 			//メンバー
-			$sql = 'INSERT INTO '.T_GROUP_MEMBER.'(group_no, uid, role_no) ';
-			$sql.= 'VALUES(:group_no, :uid, 1)';
+			$sql = 'INSERT INTO '.T_GROUP_MEMBER.'(group_no, uid, role_no, status) ';
+			$sql.= 'VALUES(:group_no, :uid, 1, 0)';
 			$stmt = $db->prepare($sql);
 			$stmt->bindValue(':group_no', $group_no);
 			$stmt->bindValue(':uid', $uid);
 			$stmt->execute();
 
 			//権限
-			$sql = 'INSERT INTO '.T_ROLE.'(group_no, no, name, sortno) ';
-			$sql.= 'VALUES(:group_no, 0, "無効", 1)';
+			$sql = 'INSERT INTO '.T_ROLE.'(group_no, no, name, sortno, user, work, customer, process, todo, schedule, cost, kintai) ';
+			$sql.= 'VALUES(:group_no, 0, "無効", 1, 0, 0, 0, 0, 0, 0, 0, 0)';
 			$stmt = $db->prepare($sql);
 			$stmt->bindValue(':group_no', $group_no);
 			$stmt->execute();

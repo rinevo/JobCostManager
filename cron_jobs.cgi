@@ -1,4 +1,4 @@
-#!/usr/local/php5.3/bin/php
+#!/usr/local/php8.2/bin/php
 <?php
 require_once(dirname(__FILE__).'/login/user_reg_timeout.php');
 ?>

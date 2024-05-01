@@ -115,9 +115,6 @@ function userreg(p) {
 				<a href="<?php echo PROJECT_ROOT ?>/contact_page.php" id="btn_contact">お問い合わせ</a>
 			</div>
 		</div>
-		<div>
-			当サイトは、Internet Explorerでの使用を推奨します。
-		</div>
 	</div>
 
 	<div id="login">
