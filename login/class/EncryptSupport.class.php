@@ -19,7 +19,7 @@ class EncryptSupport {
 
 		// 初期化ベクトルを用意
 		$iv_length = openssl_cipher_iv_length(EncryptSupport::OPENSSL_CIPHER_ALGO);
-		$this->iv = hex2bin(openssl_random_pseudo_bytes($iv_length));
+		$this->iv = bin2hex(openssl_random_pseudo_bytes($iv_length));
 
 		// キーを作成
 		if ($key) {
@@ -62,7 +62,7 @@ class EncryptSupport {
                 EncryptSupport::OPENSSL_CIPHER_ALGO,
                 $this->key,
                 EncryptSupport::OPENSSL_OPTIONS,
-                $this->iv
+                hex2bin($this->iv)
             )
         );
     }
@@ -74,7 +74,7 @@ class EncryptSupport {
                 EncryptSupport::OPENSSL_CIPHER_ALGO,
                 $this->key,
                 EncryptSupport::OPENSSL_OPTIONS,
-                $this->iv
+                hex2bin($this->iv)
             )
         );
     }
